@@ -5,3 +5,6 @@ node_modules
 *.vsix
 old_snippets
 dragonruby-linux-amd64
+package-lock.json
+vsc-extension-quickstart.md
+.vscode

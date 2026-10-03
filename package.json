@@ -1,14 +1,20 @@
 {
   "name": "dragonruby-intellisense",
-  "displayName": "dragonruby-intellisense",
-  "description": "Extension to provide Intellisense Suggestions for DragonRuby. Provides AutoComplete items and Snippets.",
+  "displayName": "DragonRuby Intellisense",
+  "description": "Ruby completions, snippets, hover descriptions, and signature help for DragonRuby GTK.",
+  "publisher": "DeeSchaedler",
   "version": "0.0.1",
+  "license": "MIT",
   "icon": "images/dragonruby-icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DSchaedler/dragonruby-intellisense.git"
+  },
   "engines": {
     "vscode": "^1.140.0"
   },
   "categories": [
-    "Other"
+    "Programming Languages"
   ],
   "activationEvents": [
     "onLanguage:ruby"
