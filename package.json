@@ -3,7 +3,7 @@
   "displayName": "DragonRuby Intellisense",
   "description": "Ruby completions, snippets, hover descriptions, and signature help for DragonRuby GTK.",
   "publisher": "DeeSchaedler",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "icon": "images/dragonruby-icon.png",
   "repository": {
@@ -25,6 +25,24 @@
       {
         "command": "dragonruby-intellisense.scanApi",
         "title": "DragonRuby: Scan Workspace for Missing API Calls"
+      }
+    ],
+    "debuggers": [
+      {
+        "type": "node-terminal",
+        "label": "DragonRuby",
+        "languages": [
+          "ruby"
+        ],
+        "initialConfigurations": [
+          {
+            "name": "DragonRuby: Run Game",
+            "type": "node-terminal",
+            "request": "launch",
+            "command": "${workspaceFolder}/dragonruby",
+            "cwd": "${workspaceFolder}"
+          }
+        ]
       }
     ]
   },

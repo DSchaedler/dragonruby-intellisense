@@ -2,6 +2,12 @@
 
 All notable changes to the DragonRuby Intellisense extension will be documented here.
 
+## [0.0.2] - 2026-10-03
+
+### Added
+
+- A **DragonRuby: Run Game** debug configuration for workspaces with the `dragonruby` executable in the workspace root.
+
 ## [0.0.1] - 2026-10-03
 
 ### Added

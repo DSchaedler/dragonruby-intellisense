@@ -11,6 +11,7 @@ DragonRuby Intellisense provides Ruby completions and snippets for DragonRuby GT
 - Completions for indexed output/render-target expressions such as `args.outputs[:scene].sprites.`.
 - Hover descriptions and signature help for documented completion items.
 - An optional, workspace-local scan for API calls documented in a DragonRuby engine checkout.
+- A **DragonRuby: Run Game** debug configuration for projects with the `dragonruby` executable in the workspace root.
 
 Completions are available in Ruby files after typing a period, for example `args.geometry.` or `args.outputs.`. Press `Ctrl+Space` (or the platform equivalent) for general code snippets.
 
@@ -22,6 +23,7 @@ On first activation, you can opt in to scan the workspace for additional DragonR
 
 - Visual Studio Code.
 - A Ruby project using DragonRuby GTK to make the API completions useful.
+- For the debug configuration, place the `dragonruby` executable in the workspace root.
 
 ## Known limitations
 

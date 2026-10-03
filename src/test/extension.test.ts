@@ -22,6 +22,29 @@ suite('Extension Test Suite', () => {
 		await extension.activate();
 	});
 
+	test('contributes a DragonRuby run-game debug configuration', () => {
+		const extension = vscode.extensions.all.find(
+			candidate => candidate.packageJSON.name === 'dragonruby-intellisense'
+		);
+		assert.ok(extension);
+
+		const debuggerContribution = extension.packageJSON.contributes.debuggers.find(
+			(debuggerContribution: { type: string }) => debuggerContribution.type === 'node-terminal'
+		);
+		assert.ok(debuggerContribution);
+		assert.ok(debuggerContribution.initialConfigurations.some((configuration: {
+			name: string;
+			type: string;
+			request: string;
+			command: string;
+			cwd: string;
+		}) => configuration.name === 'DragonRuby: Run Game' &&
+			configuration.type === 'node-terminal' &&
+			configuration.request === 'launch' &&
+			configuration.command === '${workspaceFolder}/dragonruby' &&
+			configuration.cwd === '${workspaceFolder}'));
+	});
+
 	test('Sample test', () => {
 		assert.strictEqual(-1, [1, 2, 3].indexOf(5));
 		assert.strictEqual(-1, [1, 2, 3].indexOf(0));
