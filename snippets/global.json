@@ -1,0 +1,83 @@
+{
+  "def tick args": {
+    "prefix": "def tick args",
+    "body": [
+      "# DragonRuby is built on mruby, not C Ruby: https://mruby.org/docs/api/",
+      "# Please read the engine documentation: https://docs.dragonruby.org/#/",
+      "",
+      "def tick args",
+      "  $0",
+      "end"
+    ],
+    "description": "Code Block: Main Tick Loop"
+  },
+  "def boot args": {
+    "prefix": "def boot args",
+    "body": [
+      "def boot args",
+      "  $0",
+      "end"
+    ],
+    "description": "Code Block: Boot Method"
+  },
+  "def reset args": {
+    "prefix": "def reset args",
+    "body": [
+      "def reset args",
+      "  $0",
+      "end"
+    ],
+    "description": "Code Block: Reset Method"
+  },
+  "def shutdown args": {
+    "prefix": "def shutdown args",
+    "body": [
+      "def shutdown args",
+      "  $0",
+      "end"
+    ],
+    "description": "Code Block: Shutdown Method"
+  },
+  "attr": {
+    "prefix": "attr",
+    "body": [
+      "attr"
+    ],
+    "description": "Alias to attr_accessor"
+  },
+  "attr_gtk": {
+    "prefix": "attr_gtk",
+    "body": [
+      "attr_gtk"
+    ],
+    "description": "Add environment methods to class. Do not need to pass args."
+  },
+  "geometry.scale_rect": {
+    "prefix": "scale_rect",
+    "body": [
+      "scale_rect( ${1:SCALE_FLOAT}, ${2:ANCHOR_X_OPTIONAL}, ${3:ANCHOR_Y_OPTIONAL} )"
+    ],
+    "description": "Rectangle Primitive"
+  },
+  "geometry.scale_rect_extended": {
+    "prefix": "scale_rect_extended",
+    "body": [
+      "scale_rect_extended( percentage_x: ${1:SCALE_X_FLOAT}, percentage_y: ${2:SCALE_Y_FLOAT}, anchor_x: ${3:ANCHOR_X}, anchor_y: ${4:ANCHOR_y} )"
+    ],
+    "description": "Rectangle Primitive"
+  },
+  "geometry.anchor_rect": {
+    "prefix": "anchor_rect",
+    "body": [
+      "anchor_rect( ${1:ANCHOR_X}, ${2:ANCHOR_Y} )"
+    ],
+    "description": "Rectangle Primitive"
+  },
+  "request.respond": {
+    "prefix": "respond",
+    "body": [
+      "respond ${1:HTTP_CODE}, ${2:HTTP_RESPONSE}"
+    ],
+    "description": "Respond to HTTP Requests"
+  }
+}
