@@ -1,71 +1,45 @@
-# dragonruby-intellisense README
+# DragonRuby Intellisense
 
-This is the README for your extension "dragonruby-intellisense". After writing up a brief description, we recommend including the following sections.
+![DragonRuby Intellisense logo](images/dragonruby-icon.png)
+
+DragonRuby Intellisense provides Ruby completions and snippets for DragonRuby GTK APIs in Visual Studio Code.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- API completions for common `args` namespaces, GTK, geometry, grids, easing, arrays, and other DragonRuby helpers.
+- Editable snippet placeholders for API calls that take arguments, plus output-queue append templates.
+- Completions for indexed output/render-target expressions such as `args.outputs[:scene].sprites.`.
+- Hover descriptions and signature help for documented completion items.
+- An optional, workspace-local scan for API calls documented in a DragonRuby engine checkout.
 
-For example if there is an image subfolder under your extension project workspace:
+Completions are available in Ruby files after typing a period, for example `args.geometry.` or `args.outputs.`. Press `Ctrl+Space` (or the platform equivalent) for general code snippets.
 
-\!\[feature X\]\(images/feature-x.png\)
+## Workspace API scan
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+On first activation, you can opt in to scan the workspace for additional DragonRuby API completions. Results are saved separately for each workspace. To scan again, run **DragonRuby: Scan Workspace for Missing API Calls** from the Command Palette.
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+- Visual Studio Code.
+- A Ruby project using DragonRuby GTK to make the API completions useful.
 
-## Extension Settings
+## Known limitations
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+- DragonRuby APIs vary by engine version. Built-in suggestions reflect the API data maintained in this extension; the optional scan only discovers recognizable calls in workspace documentation.
+- Hover and signature help are based on completion metadata and may not describe every overload.
+- This extension does not execute or validate Ruby or DragonRuby code.
 
-For example:
+## Development
 
-This extension contributes the following settings:
+### Getting started
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+After installing Node.js (which includes npm), open a terminal in the project folder and run:
 
-## Known Issues
+```sh
+npm install
+npm test
+```
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+`npm install` downloads the tools needed for development. `npm test` checks the code and runs the tests in Visual Studio Code. The test command may download VS Code the first time.
 
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+To try the extension while developing, open the project in Visual Studio Code and press **F5**.

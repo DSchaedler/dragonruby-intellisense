@@ -3,6 +3,7 @@
   "displayName": "dragonruby-intellisense",
   "description": "Extension to provide Intellisense Suggestions for DragonRuby. Provides AutoComplete items and Snippets.",
   "version": "0.0.1",
+  "icon": "images/dragonruby-icon.png",
   "engines": {
     "vscode": "^1.140.0"
   },
@@ -14,10 +15,10 @@
   ],
   "main": "./out/extension.js",
   "contributes": {
-    "snippets": [
+    "commands": [
       {
-        "language": "ruby",
-        "path": "./snippets/blocks.json"
+        "command": "dragonruby-intellisense.scanApi",
+        "title": "DragonRuby: Scan Workspace for Missing API Calls"
       }
     ]
   },
